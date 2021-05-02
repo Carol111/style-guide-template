@@ -4,17 +4,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Style Guide Template</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+</link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="alternate icon" href="images/favicon.ico">
 
 </head>
 
 <body>
 
+  <div class="container">
+    <header id="header">
+      <a href="#title">
+        <img src="images/logo.svg" alt="My Brand Style Guide Template">
+      </a>
 
+      <div class="menu-mobile">
+        <button onclick="toggleMenu()">
+          <img src="icons/menu-light.svg" alt="Open menu">
+        </button>
+
+        <nav>
+          <button onclick="toggleMenu()">
+            <img src="icons/close-light.svg" alt="Close menu">
+          </button>
+          <ul>
+            <li><a href="#branding"><h3>branding</h3></a></li>
+            <li><a href="#colors"><h3>colors</h3></a></li>
+            <li><a href="#grids"><h3>grids</h3></a></li>
+            <li><a href="#typography"><h3>typography</h3></a></li>
+            <li><a href="#buttons"><h3>buttons</h3></a></li>
+            <li><a href="#icons"><h3>icons</h3></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <nav class="menu-web">
+        <ul>
+          <li><a href="#branding"><h3>branding</h3></a></li>
+          <li><a href="#colors"><h3>colors</h3></a></li>
+          <li><a href="#grids"><h3>grids</h3></a></li>
+          <li><a href="#typography"><h3>typography</h3></a></li>
+          <li><a href="#buttons"><h3>buttons</h3></a></li>
+          <li><a href="#icons"><h3>icons</h3></a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
 </body>
 
 <script>
-
+  function toggleMenu() {
+    const header = document.getElementById('header');
+    header.classList.toggle('menu-active');
+  }
 </script>
 
 </html>

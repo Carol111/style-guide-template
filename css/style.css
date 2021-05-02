@@ -1,6 +1,5 @@
 /*Fonts*/
-
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
 /* CSS Reset */
 html,body,div,span,applet,object,iframe,
@@ -17,15 +16,180 @@ q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0
 
 /*Style*/
 
+html {
+  font-size:62.5%;
+}
 
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #1b1b1b;
+}
 
+h1, h2, h3, .button-text {
+  text-transform: uppercase;
+}
 
+title, h2, h4, .body-strong, .button-text {
+  font-weight: 600;
+}
+
+title {
+  font-size: 4.8rem;
+  letter-spacing: 20%;
+}
+
+h1, .button-text {
+  letter-spacing: 10%;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+.container {
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+header a img {
+  background-color: #1b1b1b;
+  height: 40px;
+  margin: 4px 4px 4px 0;
+  padding: 6px 40px 4px 40px;
+}
+
+.menu-web {
+  height: 50px;
+  width: 100%;
+  margin: 4px 0;
+  padding: 0 240px 0 40px;
+  background-color: #1b1b1b;
+}
+
+.menu-web ul {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-web li{
+  display: flex;
+  align-items: center;
+  height: 45px;
+  margin: 4px 0;
+  border-bottom: 4px solid transparent;
+}
+
+.menu-web li + li{
+  margin-left: 24px;
+}
+
+.menu-web li:hover {
+  border-bottom: 4px solid #fff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ebebeb;
+}
+
+.menu-mobile {
+  display: none;
+}
 
 
 /*Breakpoints*/
 @media screen and (max-width: 600px)
 {
+  header a {
+    position: relative;
+    margin-right: 4px;
+    width: 100%;
+  }
 
+  header a img {
+    width: 100%;
+    height: 30px;
+    padding: 6px 0 4px 0;
+  }
 
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .menu-mobile button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .menu-mobile img {
+    margin: 4px 0;
+    height: 24px;
+    background-color: #1b1b1b;
+    padding: 8px 10px;
+  }
+
+  .menu-web {
+    display: none;
+  }
+
+  .menu-mobile nav {
+    height: 100vh;
+    background-color: #1b1b1b;
+    position: fixed;
+    right: -300px;
+    width: 90%;
+    max-width: 300px;
+    transform: translate(0);
+    transition: transform .2s ease-out;
+  }
+
+  .menu-mobile nav button {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .menu-mobile nav img {
+    float: right;
+  }
+
+  .menu-mobile nav li {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+  }
+
+  .menu-mobile nav li:hover {
+    border-left: 4px solid #fff;
+  }
+
+  .menu-active .menu-mobile nav {
+    transform: translate(-300px);
+    transition: transform .2s ease-in;
+  }
 }
