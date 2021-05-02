@@ -119,7 +119,7 @@ nav a {
 
 
 /*Breakpoints*/
-@media screen and (max-width: 600px)
+@media screen and (max-width: 1280px)
 {
   header a {
     position: relative;
