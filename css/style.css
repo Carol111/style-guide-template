@@ -31,17 +31,18 @@ h1, h2, h3, .button-text {
   text-transform: uppercase;
 }
 
-title, h2, h4, .body-strong, .button-text {
+.main-text, h2, .body-strong, .button-text {
   font-weight: 600;
 }
 
-title {
+.main-text {
   font-size: 4.8rem;
-  letter-spacing: 20%;
+  letter-spacing: 10px;
+  width: 500px;
 }
 
 h1, .button-text {
-  letter-spacing: 10%;
+  letter-spacing: 5px;
 }
 
 h1 {
@@ -57,6 +58,10 @@ h3 {
 }
 
 h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
   font-size: 1.8rem;
 }
 
@@ -68,13 +73,14 @@ h4 {
 header {
   display: flex;
   flex-direction: row;
+  max-height: 58px;
 }
 
 header a img {
   background-color: #1b1b1b;
   height: 40px;
-  margin: 4px 4px 4px 0;
-  padding: 6px 40px 4px 40px;
+  margin: 4px 0;
+  padding: 6px 0 4px 0;
 }
 
 .menu-web {
@@ -114,6 +120,35 @@ nav a {
 
 .menu-mobile {
   display: none;
+}
+
+.side-space {
+  min-width: 300px;
+  margin-right: 4px;
+}
+
+.filled {
+  background-color: #1b1b1b;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.title {
+  background-color: #1b1b1b;
+  color: #ebebeb;
+  padding: 130px 240px 70px 40px;
+}
+
+.title h4 {
+  margin-top: 50px;
+}
+
+.title h5 {
+  margin-top: 130px;
 }
 
 
