@@ -1,6 +1,48 @@
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
+
+/* Animation */
+@-webkit-keyframes right-to-left{
+  from{-webkit-transform: translateX(100%);}
+  to{-webkit-transform: translateX(0);}
+}
+
+@keyframes right-to-left{
+  from{transform: translate3d(100%,0,0);}
+  to{transform: translate3d(0,0,0);}
+}
+
+@-webkit-keyframes left-to-right{
+  from{-webkit-transform: translateX(-100%);}
+  to{-webkit-transform: translateX(0);}
+}
+
+@keyframes left-to-right{
+  from{transform: translate3d(-100%,0,0);}
+  to{transform: translate3d(0,0,0);}
+}
+
+@-webkit-keyframes top-to-bottom{
+  from{-webkit-transform: translateY(-100%);}
+  to{-webkit-transform: translateY(0);}
+}
+
+@keyframes top-to-bottom{
+  from{transform: translate3d(0,-100%,0);}
+  to{transform: translate3d(0,0,0);}
+}
+
+@-webkit-keyframes bottom-to-top{
+  from{-webkit-transform: translateY(100%);}
+  to{-webkit-transform: translateY(0);}
+}
+
+@keyframes bottom-to-top{
+  from{transform: translate3d(0,100%,0);}
+  to{transform: translate3d(0,0,0);}
+}
+
 /* CSS Reset */
 html,body,div,span,applet,object,iframe,
 h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,
@@ -129,7 +171,13 @@ nav a {
 }
 
 .filled {
+  z-index: 10;
   background-color: #1b1b1b;
+  left:-100%;
+  transform: translate3d(-100%,0,0);
+  -webkit-transform: translate3d(-100%,0,0);
+  -webkit-animation: left-to-right .7s linear forwards;
+  animation: left-to-right .7s linear forwards;
 }
 
 .content {
@@ -152,6 +200,29 @@ nav a {
   margin-top: 130px;
 }
 
+.title {
+  bottom:200%;
+  transform: translate3d(0,-100%,0);
+  -webkit-transform: translate3d(0,-100%,0);
+  -webkit-animation: bottom-to-top .7s linear forwards;
+  animation: bottom-to-top .7s linear forwards;
+}
+
+.menu-web, .menu-mobile button {
+  right:200%;
+  transform: translate3d(-100%,0,0);
+  -webkit-transform: translate3d(-100%,0,0);
+  -webkit-animation: right-to-left .7s linear forwards;
+  animation: right-to-left .7s linear forwards;
+}
+
+header a img {
+  top:200%;
+  transform: translate3d(0,100%,0);
+  -webkit-transform: translate3d(0,100%,0);
+  -webkit-animation: top-to-bottom .7s linear forwards;
+  animation: top-to-bottom .7s linear forwards;
+}
 
 /*Breakpoints*/
 @media screen and (max-width: 1280px)
