@@ -38,7 +38,7 @@ h1, h2, h3, .button-text {
 .main-text {
   font-size: 4.8rem;
   letter-spacing: 10px;
-  width: 500px;
+  width: 60%;
 }
 
 h1, .button-text {
@@ -156,6 +156,10 @@ nav a {
 /*Breakpoints*/
 @media screen and (max-width: 1280px)
 {
+  header {
+    max-height: 48px;
+  }
+
   header a {
     position: relative;
     margin-right: 4px;
@@ -166,6 +170,16 @@ nav a {
     width: 100%;
     height: 30px;
     padding: 6px 0 4px 0;
+  }
+
+  .side-space {
+    min-width: 20%;
+    margin-right: 4px;
+  }
+
+  .title {
+    width: 100%;
+    padding: 80px 80px 40px 20px;
   }
 
   .menu-mobile {
@@ -227,5 +241,33 @@ nav a {
   .menu-active .menu-mobile nav {
     transform: translate(-300px);
     transition: transform .2s ease-in;
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+  .main-text {
+    font-size: 3.6rem;
+    letter-spacing: 5px;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+  }
+
+  .title {
+    padding: 110px 20px 110px 20px;
+  }
+
+  .title h5 {
+    margin-top: 80px;
+  }
+
+  .side-space {
+    min-width: 40px;
   }
 }
