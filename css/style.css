@@ -230,6 +230,8 @@ header a img {
 
 .right-content {
   right:200%;
+  width: 100%;
+  padding: 0 240px 40px 40px;
 }
 
 .slide-from-left {
@@ -277,6 +279,10 @@ header a img {
   .title {
     width: 100%;
     padding: 80px 80px 100px 20px;
+  }
+
+  .right-content {
+    padding: 0 80px 40px 20px;
   }
 
   .menu-mobile {
@@ -362,6 +368,10 @@ header a img {
 
   .title h5 {
     margin-top: 80px;
+  }
+
+  .right-content {
+    padding: 0 20px 40px 20px;
   }
 
   .filled {
