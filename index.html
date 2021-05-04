@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 </link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="alternate icon" href="images/favicon.ico">
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 
 </head>
 
@@ -50,7 +51,7 @@
     </header>
 
     <div class="content">
-      <div class="side-space filled"></div>
+      <div class="filled"></div>
       <div class="title">
         <div class="main-text">
           STYLE GUIDE TEMPLATE
@@ -64,9 +65,27 @@
         <h5>
           by CAROLINE C. MACHADO
         </h5>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-content outline"></div>
+      <div class="right-content branding">
+        <div class="main-text">
+          Branding
+        </div>
+        <div>
+          brand small
+        </div>
+        <div>
+          brand big
+        </div>
+        <div>
+          brand icons
         </div>
       </div>
     </div>
+
   </div>
 
 </body>
@@ -76,6 +95,62 @@
     const header = document.getElementById('header');
     header.classList.toggle('menu-active');
   }
+</script>
+
+<script>
+  (function($) {
+    $.fn.visible = function(partial) {
+
+        var $t            = $(this),
+            $w            = $(window),
+            viewTop       = $w.scrollTop(),
+            viewBottom    = viewTop + $w.height(),
+            _top          = $t.offset().top,
+            _bottom       = _top + $t.height(),
+            compareTop    = partial === true ? _bottom : _top,
+            compareBottom = partial === true ? _top : _bottom;
+
+      return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+    };
+  })(jQuery);
+
+  var win = $(window);
+
+  var leftContent = $(".left-content");
+  var rightContent = $(".right-content");
+
+  leftContent.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("already-visible");
+    }
+  });
+
+  rightContent.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("already-visible");
+    }
+  });
+
+  win.scroll(function(event) {
+
+    leftContent.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("slide-from-left");
+      }
+    });
+
+    rightContent.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("slide-from-right");
+      }
+    });
+
+  });
 </script>
 
 </html>

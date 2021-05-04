@@ -69,7 +69,7 @@ body {
   color: #1b1b1b;
 }
 
-h1, h2, h3, .button-text {
+.main-text, h1, h2, h3, .button-text {
   text-transform: uppercase;
 }
 
@@ -171,13 +171,17 @@ nav a {
 }
 
 .filled {
-  z-index: 10;
-  background-color: #1b1b1b;
+  min-width: 300px;
+  margin-right: 4px;
   left:-100%;
-  transform: translate3d(-100%,0,0);
-  -webkit-transform: translate3d(-100%,0,0);
-  -webkit-animation: left-to-right .7s linear forwards;
-  animation: left-to-right .7s linear forwards;
+  background-color: #1b1b1b;
+}
+
+.outline {
+  margin-right: 4px;
+  left:-100%;
+  min-width: 296px;
+  border-right: 4px solid #1b1b1b;
 }
 
 .content {
@@ -224,6 +228,24 @@ header a img {
   animation: top-to-bottom .7s linear forwards;
 }
 
+.right-content {
+  right:200%;
+}
+
+.slide-from-left {
+  transform: translate3d(-100%,0,0);
+  -webkit-transform: translate3d(-100%,0,0);
+  -webkit-animation: left-to-right .7s linear forwards;
+  animation: left-to-right .7s linear forwards;
+}
+
+.slide-from-right {
+  transform: translate3d(-100%,0,0);
+  -webkit-transform: translate3d(-100%,0,0);
+  -webkit-animation: right-to-left .7s linear forwards;
+  animation: right-to-left .7s linear forwards;
+}
+
 /*Breakpoints*/
 @media screen and (max-width: 1280px)
 {
@@ -243,14 +265,18 @@ header a img {
     padding: 6px 0 4px 0;
   }
 
-  .side-space {
+  .filled {
     min-width: 20%;
+  }
+
+  .outline {
+    min-width: calc(20% - 4px);
     margin-right: 4px;
   }
 
   .title {
     width: 100%;
-    padding: 80px 80px 40px 20px;
+    padding: 80px 80px 100px 20px;
   }
 
   .menu-mobile {
@@ -338,7 +364,11 @@ header a img {
     margin-top: 80px;
   }
 
-  .side-space {
+  .filled {
     min-width: 40px;
+  }
+
+  .outline {
+    min-width: 36px;
   }
 }
