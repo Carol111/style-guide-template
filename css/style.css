@@ -252,6 +252,55 @@ header a img {
   animation: right-to-left .7s linear forwards;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-container > div:first-child {
+  margin-right: 24px;
+}
+
+.logo {
+  margin-top: 24px;
+  flex-grow: 1;
+}
+
+.logo-border {
+  display: flex;
+  justify-content: center;
+  margin: 0 4px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.logo-small {
+  padding-top: 6px;
+}
+
+.logo-black {
+  background-color: #1b1b1b;
+}
+
+.logo-gray {
+  background-color: #ebebeb;
+}
+
+.logo-big {
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-big img:first-child {
+  width: 30%;
+  padding-top: 16px;
+}
+
+.logo-big img:last-child {
+  width: 60%;
+  padding: 24px 0;
+}
+
 /*Breakpoints*/
 @media screen and (max-width: 1280px)
 {
@@ -348,6 +397,16 @@ header a img {
   .menu-active .menu-mobile nav {
     transform: translate(-300px);
     transition: transform .2s ease-in;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .logo-container > div:first-child {
+    margin-right: 0;
   }
 }
 
