@@ -57,9 +57,9 @@ blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,
 q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 
 /*Style*/
-
 html {
   font-size:62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -116,6 +116,10 @@ header {
   display: flex;
   flex-direction: row;
   max-height: 58px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
 }
 
 header a img {
