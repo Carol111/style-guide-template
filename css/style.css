@@ -368,6 +368,7 @@ header a img {
     background-color: #1b1b1b;
     position: fixed;
     right: -300px;
+    top: 0;
     width: 90%;
     max-width: 300px;
     transform: translate(0);
