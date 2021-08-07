@@ -532,4 +532,16 @@ header a img {
   .outline {
     min-width: 36px;
   }
+
+  .color-cards-container {
+    gap: 16px;
+  }
+
+  .color-card {
+    padding: 16px;
+  }
+
+  .color {
+    height: 80px;
+  }
 }
