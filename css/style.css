@@ -531,6 +531,18 @@ header a img {
   opacity: 0.8;
 }
 
+.icons-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.icons-container img {
+  width: 32px;
+  height: 32px;
+}
 
 /*Breakpoints*/
 @media screen and (max-width: 1280px)
