@@ -73,8 +73,16 @@ body {
   text-transform: uppercase;
 }
 
-.main-text, h2, .body-strong, .button-text {
+.main-text, h2, h4, .body-strong, .button-text {
   font-weight: 600;
+}
+
+.light-text {
+  color: #757575;
+}
+
+.small-text {
+  font-size: 1.2rem;
 }
 
 .main-text {
@@ -92,7 +100,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 h3 {
@@ -435,6 +443,39 @@ header a img {
 
 .grid-details-container td {
   padding: 4px 12px;
+}
+
+.typography-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.typography-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.typography-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.typography-detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.typography-detail div p {
+  margin-bottom: 4px;
 }
 
 
