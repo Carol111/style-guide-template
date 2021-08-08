@@ -415,6 +415,28 @@ header a img {
   grid-column: span 3;
 }
 
+.grid-details-container {
+  background-color: #fff;
+  margin-top: 24px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.2);
+  padding: 12px;
+}
+
+.grid-details-container table {
+  width: 100%;
+  text-align: left;
+  display: block;
+  overflow: scroll;
+}
+
+.grid-details-container th {
+  padding: 12px;
+}
+
+.grid-details-container td {
+  padding: 4px 12px;
+}
 
 
 /*Breakpoints*/
@@ -572,5 +594,12 @@ header a img {
 
   .color {
     height: 80px;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .grid-details-container table {
+    max-width: 250px;
   }
 }
