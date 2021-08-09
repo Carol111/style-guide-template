@@ -1,0 +1,33 @@
+/* Typography Section */
+.typography-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.typography-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.typography-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.typography-detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.typography-detail div p {
+  margin-bottom: 4px;
+}

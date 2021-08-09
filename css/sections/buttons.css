@@ -1,0 +1,53 @@
+/* Buttons Section */
+.buttons-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button {
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #1b1b1b;
+}
+
+.button:disabled {
+  color: #757575;
+  border: 1px solid #757575;
+  background-color: #ebebeb;
+  opacity: 0.7;
+}
+
+.button-primary {
+  background-color: #1b1b1b;
+  color: #ebebeb;
+  transition: 300ms background-color;
+}
+
+.button-primary:hover {
+  background-color: #ebebeb;
+  color: #1b1b1b;
+  opacity: 0.7;
+}
+
+.button-primary:active {
+  opacity: 0.8;
+}
+
+.button-secondary {
+  background-color: #ebebeb;
+  color: #1b1b1b;
+  transition: 300ms background-color;
+}
+
+.button-secondary:hover {
+  background-color: #1b1b1b;
+  color: #ebebeb;
+  opacity: 0.7;
+}
+
+.button-secondary:active {
+  opacity: 0.8;
+}

@@ -1,0 +1,87 @@
+/* Section */
+.container {
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.side-space {
+  min-width: 300px;
+  margin-right: 4px;
+}
+
+.filled {
+  min-width: 300px;
+  margin-right: 4px;
+  left:-100%;
+  background-color: #1b1b1b;
+}
+
+.outline {
+  margin-right: 4px;
+  left:-100%;
+  min-width: 296px;
+  border-right: 4px solid #1b1b1b;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.right-content {
+  right:200%;
+  width: 100%;
+  padding: 0 240px 40px 40px;
+}
+
+.slide-from-left {
+  transform: translate3d(-100%,0,0);
+  -webkit-transform: translate3d(-100%,0,0);
+  -webkit-animation: left-to-right .7s linear forwards;
+  animation: left-to-right .7s linear forwards;
+}
+
+.slide-from-right {
+  transform: translate3d(-100%,0,0);
+  -webkit-transform: translate3d(-100%,0,0);
+  -webkit-animation: right-to-left .7s linear forwards;
+  animation: right-to-left .7s linear forwards;
+}
+
+/*Breakpoints*/
+@media screen and (max-width: 1280px)
+{
+  .filled {
+    min-width: 20%;
+  }
+
+  .outline {
+    min-width: calc(20% - 4px);
+    margin-right: 4px;
+  }
+
+  .title {
+    width: 100%;
+    padding: 80px 80px 100px 20px;
+  }
+
+  .right-content {
+    padding: 0 80px 40px 20px;
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+  .right-content {
+    padding: 0 20px 40px 20px;
+  }
+
+  .filled {
+    min-width: 40px;
+  }
+
+  .outline {
+    min-width: 36px;
+  }
+}

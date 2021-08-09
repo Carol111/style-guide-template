@@ -1,0 +1,13 @@
+/* Icons Section */
+.icons-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.icons-container img {
+  width: 32px;
+  height: 32px;
+}

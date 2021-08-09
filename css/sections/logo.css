@@ -1,0 +1,100 @@
+/* Logo Section */
+.logo-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-container > div:first-child {
+  margin-right: 24px;
+}
+
+.logo-icon-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  gap: 24px;
+}
+
+.logo-icon-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-icon-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.logo-64 {
+  border-radius: 5px;
+  width: 64px;
+  height: 64px;
+  padding: 18px;
+}
+
+.logo-32 {
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 12px;
+}
+
+.logo-16 {
+  border-radius: 5px;
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+}
+
+.logo {
+  margin-top: 24px;
+  flex-grow: 1;
+}
+
+.logo-border {
+  display: flex;
+  justify-content: center;
+  margin: 0 4px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.logo-small {
+  padding-top: 6px;
+}
+
+.logo-black {
+  background-color: #1b1b1b;
+}
+
+.logo-gray {
+  background-color: #ebebeb;
+}
+
+.logo-big {
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-big img:first-child {
+  width: 30%;
+  padding-top: 16px;
+}
+
+.logo-big img:last-child {
+  width: 60%;
+  padding: 24px 0;
+}
+
+/*Breakpoints*/
+@media screen and (max-width: 900px) {
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .logo-container > div:first-child {
+    margin-right: 0;
+  }
+}
